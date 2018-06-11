@@ -56,13 +56,14 @@ Home Talleres
           <tr>
 
           <td style="text-align: center;"> 
-              <!--Imagen segun el nombre del taller-->                     
-                        <a href="#"  class="image">
-                          <img id="perfil" src="{{asset('images/masculino.jpg')}}" 
+              <!--Imagen segun el nombre del taller-->                    
+                        <a href="{{route('taller.perfil',1)}}"  class="image">
+                          <img id="perfil" src="{{asset('images/f.png')}}" 
                                     style=" 
-                                    height: 70px;
-                                    width: 70px;
+                                    height: 50px;
+                                    width: 50px;
                                     /* los siguientes valores son independientes del tamaño del círculo */
+                                    border-radius: 50%;
                                     background-repeat: no-repeat;
                                     background-position: 50%;                                    
                                     background-size: 100% auto;" 
@@ -88,7 +89,7 @@ Home Talleres
               </td>
               <!--Boton para editar al becario sus datos -->
               <td style="color: rgb(150, 156, 156  ); text-align: center;">
-                    <a href="{{route('Talleres.edit',2)}}" class="image"><br><img src="{{asset('images/editar.png')}}" style="height: 70px; width: 70px;" ></a>
+                    <a href="{{route('Talleres.edit',2)}}" class="image"><br><img src="{{asset('images/editar.png')}}" style="height: 35px; width: 35px;" ></a>
               </td>
 
               <td id="letra" style="text-align: center;">

@@ -50,42 +50,27 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/main.css')}}">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
-<body>
+<body >
 
 
 <div class="limiter">
-        <div class="container-login100">
+        <div id="login1" class="container-login100">
             <div class="login100-more" style="background-image: url('{{asset('images/bg-01.jpg')}}'); "></div>
                
             <div class="wrap-login100 p-l-50 p-r-50 p-t-10 p-b-10">
 
 
-                <form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
+                <form id="form" class="login100-form validate-form" method="POST" action="{{ route('register') }}">
                      {{ csrf_field() }}
-
-                    <span class="login100-form-title p-b-59" >
-                        Regístrate
-                    </span>
+                    <div  id="posicion">  
+                 
+                    <h1 id="regis" ><b>Registrate</b></h1>
+                    </div>
 
                     <div class="wrap-input100 validate-input" data-validate="El nombre es requerido">
-                        <span class="label-input100">Nombre Completo</span>
-                        <input class="input100" type="text" name="name" placeholder="Nombre..." >
+                        <span id="label" class="label-input100">Nombre Completo</span>
+                        <input id="input100" class="input100" type="text" name="name" placeholder="Nombre..." >
 
                         <span class="focus-input100"></span>
                     </div>
@@ -93,8 +78,8 @@
 
 
                     <div class="wrap-input100 validate-input" data-validate = "Se requiere un correo electrónico válido: ex@abc.xyz">
-                        <span class="label-input100">Correo Electrónico</span>
-                        <input class="input100" type="text" name="email" placeholder="Correo..." value="{{ old('email') }}" >
+                        <span id="label" class="label-input100">Correo Electrónico</span>
+                        <input id="input100"  class="input100" type="text" name="email" placeholder="Correo..." value="{{ old('email') }}" >
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -108,8 +93,8 @@
 
 
                     <div class="wrap-input100 validate-input" data-validate = "Contraseña requerida">
-                        <span class="label-input100">Contraseña</span>
-                        <input class="input100" type="text" name="password" placeholder="*************" >
+                        <span id="label" class="label-input100">Contraseña</span>
+                        <input id="input100" class="input100" type="text" name="password" placeholder="*************" >
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -122,15 +107,15 @@
 
 
                     <div class="wrap-input100 validate-input" data-validate = "Debe repetir la contraseña">
-                        <span class="label-input100">Repita su Contraseña</span>
-                        <input class="input100" id="password-confirm" type="text"  name="password_confirmation" placeholder="*************">
+                        <span id="label" class="label-input100">Repita su Contraseña</span>
+                        <input id="input100" class="input100" id="password-confirm" type="text"  name="password_confirmation" placeholder="*************">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
-                            <button type="submit" class="login100-form-btn">
+                            <button id="boton" type="submit" class="login100-form-btn">
                                 Regístrate
                             </button>
                         </div>

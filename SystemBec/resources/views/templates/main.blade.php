@@ -14,25 +14,10 @@
           <link rel="stylesheet" type="text/css" href="{{asset('plugins/toastr/build/toastr.min.css')}}">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
          
-          <!--Conexion con vuetify  
-          <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
-		  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
-  		  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-          <meta name="csrf-token" content="{{ csrf_token() }}">
-          @yield('head')
-	        <script src="https://momentjs.com/downloads/moment.js"></script>
-			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet"/>
-			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-			<script src="https://cdn.jsdelivr.net/npm/vue@2.4.4/dist/vue.runtime.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/vue@2.4.4/dist/vue.min.js"></script>
--->
-
-          
 </head>
 <body>
 
-<!-- Wrapper -->
+			<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Main -->
@@ -50,16 +35,14 @@
                 				</header>
                                 <br>
 			                    @include('flash::message')
-
-			                    @yield('content')
-  
+			                    @yield('content')  
 						</div>
 					</div>
+
 				<!-- Sidebar -->
 					<div id="sidebar">
-						<div class="inner">
-						
-						<!-- Menu -->
+						<div class="inner">						
+								<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
 										<h2 style="color: white">Menú</h2>
@@ -68,38 +51,55 @@
 										<li><a id="decoracion" href="{{route('Actividades.inicio')}}"><h5>Inicio</h5></a></li>
 
 
-<!--***************************************************************************************************************** -->					    @if(Auth::user()->formacion())																
-					<li>
-						<span class="opener">Talleres</span>
-						<ul>
-							<li><a id="decoracion" href="{{route('taller.agregar')}}">Agregar Taller</a></li>
-							<li><a id="decoracion" href="{{route('Talleres.store')}}">Buscar Taller</a></li>		
-							<li><a id="decoracion" href="{{route('Actividades.historial')}}">Historial de Talleres</a></li>
-						</ul>
-					</li>
- 
-<!--***************************************************************************************************************** -->	
-
-<!--***************************************************************************************************************** -->														<li>
-											<span class="opener">Becarios</span>
-											<ul>
-											<li><a id="decoracion" href="{{route('taller.agregar')}}">Becarios con grupo</a></li>
-											<li><a id="decoracion" href="{{route('Actividades.store')}}">Becarios sin grupos</a></li>		
-												</li>
-											</ul>
-										</li>
-
-<!--***************************************************************************************************************** -->				
-@endif
+									<!--***************************************************************************************************************** -->
+									 @if(Auth::user()->Formacion())																
+														<li>
+															<span class="opener">Talleres</span>
+															<ul>
+																<li><a id="decoracion" href="{{route('taller.agregar')}}">Agregar Taller</a></li>
+																<li><a id="decoracion" href="{{route('Talleres.store')}}">Buscar Taller</a></li>		
+																<li><a id="decoracion" href="{{route('Actividades.historial')}}">Historial de Talleres</a></li>
+															</ul>
+														</li>								 
+																		
+														<li>
+															<span class="opener">Becarios</span>
+															<ul>
+															<li><a id="decoracion" href="{{route('taller_becarios.index')}}">Perfil</a></li>
+															</ul>
+														</li>												
+									@endif
+									<!--***************************************************************************************************************** -->	
 
 
+									@if(Auth::user()->liderazgo())
+														<li>
+															<span class="opener">Reunion</span>
+															<ul>
+																<li><a id="decoracion" href="{{route('taller.agregar')}}">Agregar Reunion</a></li>
+																<li><a id="decoracion" href="{{route('Talleres.store')}}">Buscar Reunion</a></li>		
+																<li><a id="decoracion" href="{{route('Actividades.historial')}}">Historial de Reuniones</a></li>
+															</ul>
+														</li>								 
+																		
+														<li>
+															<span class="opener">Becarios</span>
+															<ul>
+															<li><a id="decoracion" href="{{route('taller_becarios.index')}}">Becarios</a></li>
+															<li><a id="decoracion" href="{{route('taller_becarios.index')}}">Becarios sin grupo</a></li>
+															</ul>
+														</li>
+														<li>
+															<span class="opener">Reporte</span>
+															<ul>
+															<li><a id="decoracion" href="{{route('taller_becarios.index')}}">Ver reportes</a></li>
+															</ul>
+														</li>	
+									@endif
+									<!--***************************************************************************************************************** -->	
 
 
-
-
-
-
-										@if(Auth::user()->admin() || Auth::user()->operaciones())
+									@if(Auth::user()->admin() || Auth::user()->operaciones())
 										<li>
 											<span class="opener"><h6>Actividades</h6></span>
 											<ul>
@@ -109,11 +109,10 @@
 												<li><a id="decoracion" href="{{route('Actividades.historial')}}">Historial de Actividad</a></li>
 											</ul>
 										</li>
-										@endif
-
+									@endif
 									
 
-										@if(Auth::user()->admin() || Auth::user()->seguimiento() || Auth::user()->operaciones())
+									@if(Auth::user()->admin() || Auth::user()->seguimiento() || Auth::user()->operaciones())
 										<li>
 											<span class="opener"><h6>Becarios</h6></span>
 											<ul>
@@ -124,8 +123,9 @@
 												<li><a id="decoracion" href="{{route('Becarios.sin_asignar')}}">Asignar Becarios</a></li>											    
 											</ul>
 										</li>
-										@endif
-										@if(Auth::user()->admin() || Auth::user()->operaciones())
+									@endif
+
+									@if(Auth::user()->admin() || Auth::user()->operaciones())
 										<li>
 											<span class="opener"><h6>Reportes</h6></span>
 											<ul>
@@ -134,7 +134,7 @@
 												
 											</ul>
 										</li>
-										@endif
+									@endif
 										@if(Auth::user()->admin())
 										<li>
 											<span class="opener"><h6>Documentación Becarios</h6></span>
