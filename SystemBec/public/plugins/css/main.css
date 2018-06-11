@@ -532,3 +532,358 @@ iframe {
     padding-right: 15px;
   }
 }
+
+
+
+
+
+@media screen and (max-width: 1680px) {
+
+    #login1{
+     font-size: 0.7em;
+
+    
+    
+  }
+
+  }
+
+ 
+
+
+  @media screen and (max-width: 1280px) {
+
+   
+
+  }
+
+  @media screen and (max-width: 980px) {
+
+    
+
+  }
+
+
+
+  @media screen and (max-width: 736px) {
+    #perfil{
+    border-radius: 50%;
+  } 
+  
+  }
+
+/*este codigo lo agrege yo para ocultar algunos elementos segun dispositivo*/
+@media screen and (max-width: 475px){
+  
+
+  #titulos1{
+    position: center;
+    text-align: center;
+  }
+
+  #letra{
+    font-size: 0.7em;
+    
+  }
+  #letra1{
+    padding: 1px;
+    font-size: 0.34em;
+      }
+
+  #letra2{
+    font-size: 1.5em;
+      }
+
+  #imgestilo{
+    width: 360px;
+    height: 180px;
+       }
+
+  ul span:hover {
+        color: white;
+      }
+  #perfil{
+    border-radius: 50%;
+  }   
+
+}
+
+@media screen and (max-width: 400px){
+  
+
+  #titulos1{
+    position: center;
+    text-align: center;
+  }
+
+  #letra{
+    font-size: 0.7em;
+    
+  }
+  #letra1{
+    padding: 1px;
+    font-size: 0.34em;
+  }
+  #letra2{
+    font-size: 1.5em;
+  }
+
+  #imgestilo{
+    width: 340px;
+    height: 170px;
+    margin: 1px;
+  }
+
+  #perfil{
+    border-radius: 50%;
+  } 
+
+}
+/*Resolucion de la pantalla del iphone 6*/
+@media screen and (max-width: 375px){
+  
+
+  #login1{
+      font-size: 1.3em;
+      color: #e2181866;
+   
+  }
+
+  #titulos1{
+    position: center;
+    text-align: center;
+  }
+
+  #letra{
+    font-size: 0.7em;
+    
+  }
+  #letra1{
+    font-size: 0.3em;
+  }
+  #letra2{
+    font-size: 1.5em;
+  }
+
+  #imgestilo{
+    width: 300px;
+    height: 180px;
+  }
+
+  #banner h1 {
+    margin-top: 1em; 
+    }
+    #perfil{
+    border-radius: 50%;
+  } 
+
+}
+
+@media screen and (max-width: 344px){
+  
+
+  #titulos1{
+    position: center;
+    text-align: center;
+  }
+
+  #letra{
+    font-size: 0.7em;
+    
+  }
+  #letra1{
+    font-size: 0.29em;
+  }
+  #letra2{
+    font-size: 1.5em;
+  }
+
+  #imgestilo{
+    width: 280px;
+    height: 160px;
+  }
+
+  #perfil{
+    border-radius: 50%;
+  } 
+
+}
+
+
+#letra{
+  color: grey;
+}
+  /*codigo iphone 4*/
+@media screen and (max-width: 320px){
+
+
+  #form{
+    text-align: center;
+  }
+
+  #login1{
+      width: 90%;
+      margin-right: 20px;
+    
+   
+  }
+
+  #login100{
+      position: center;
+     font-size: 0.95em; 
+  }
+
+  #posicion{
+    text-align: center;
+  }
+
+
+
+  #input100{
+        height: 26px;
+        font-size: 0.65em;
+        text-align: center;
+       
+  }
+
+  .wrap-input100 {
+       margin-bottom: 16px; 
+  }
+
+  #label{
+        height: 10px;
+         font-size: 0.7em;
+
+  }
+
+.login100-form-bgbtn {
+   
+    background: -webkit-linear-gradient(top, #7f7142, #0ea5d0, #895ea5, #dc0960);
+
+  }
+
+  #boton{
+        height: 37px;
+  }
+
+  .limiter{
+    margin: 15px;
+  }
+
+  #regis{
+    text-align: center;
+    color: black;
+    margin: 45px;
+
+    font-size: 1.2em;
+  }
+
+
+
+
+  #boton100{
+    height: 35px;
+    font-size: 13px;
+    
+  }
+
+  #container100{
+    padding-top: 3px;
+  }
+
+  #user1{
+    padding-top: 9px;
+    font-size: 0.95em; 
+  }
+
+  #iniciars{
+  font-size: 1em;  
+  }
+
+  .wrap-login100 {
+  width: 900px;
+  height: 400px;
+  padding: 20px 15px 33px 15px;
+  }
+
+  #cuenta{
+    padding-top: 25px;
+    }
+  #cuenta1{
+    font-size: 0.999em;
+  }
+
+  #encuentra{
+    font-size: 1em;
+  }
+
+  #enlace{
+    font-size: 0.8em;
+    padding-top: 14px;
+  }
+
+  #social{
+        margin-top: 15px;
+  }
+
+  #social1{
+        margin-top: 15px;
+  }
+
+  
+  #titulos1{
+    position: center;
+    text-align: center;
+  }
+
+  #letra{
+    font-size: 0.7em;
+    
+  }
+  #letra1{
+    font-size: 0.29em;
+  }
+
+  #letrapie{
+  font-size: 1.3em;   
+  }
+  #letra2{
+    font-size: 1.5em;
+  }
+
+  #imgestilo{
+    width: 270px;
+    height: 150px;
+    align-items: center;
+  }
+
+
+    #sidebar {
+    width: 19em;
+}
+
+}
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -316,6 +316,10 @@
 
 	@media screen and (max-width: 1680px) {
 
+		#login1{
+		size: 8;
+	}
+
 		.row > * {
 			padding: 0 0 0 1.5em;
 		}
@@ -1029,9 +1033,13 @@
 	}	
 
 }
-
+/*Resolucion de la pantalla del iphone*/
 @media screen and (max-width: 375px){
 	
+
+	#login1{
+		size: 4;
+	}
 
 	#titulos1{
 		position: center;

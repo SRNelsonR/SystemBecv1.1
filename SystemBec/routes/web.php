@@ -24,22 +24,42 @@ use Illuminate\Support\Facades\Input;
 Route::group(['middleware'=>'auth'], function(){
 
 
-  /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    Route::group(['middleware'=>['auth','formacion']], function(){
+  /*>>>>>>>>>>>>>>>>>>>>>>>>Modulo de Formaacion Rutas>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  /**/ 
+  /**/      Route::group(['middleware'=>['auth','formacion']], function(){
+  /**/  
+  /**/            /*----------------Rutas para los talleres-------------------*/
+  /**/            Route::resource('Talleres','tallerController');      
+  /**/            Route::get('Agregar/taller',
+  /**/                     [
+  /**/                      'as'=>'taller.agregar',
+  /**/                      'uses'=>'TallerController@create'
+  /**/                     ]); 
+  /**/
+  /**/            Route::get('perfil/taller/{id}',
+  /**/                     [
+  /**/                      'as'=>'taller.perfil',
+  /**/                      'uses'=>'TallerController@perfil'
+  /**/                     ]);             
+  /**/
+  /**/            Route::get('indexf/becarios',
+  /**/                     [
+  /**/                      'as'=>'taller_becarios.index',
+  /**/                      'uses'=>'TallerController@index_becarios'
+  /**/                     ]);
 
-      /*----------------Rutas para los talleres-------------------*/
+  /**/            Route::get('perfilf/becarios/{id}',
+  /**/                     [
+  /**/                      'as'=>'taller_becarios.perfil',
+  /**/                      'uses'=>'TallerController@perfil_becarios'
+  /**/                     ]);     
+  /**/                              
+  /**/                                                                 });
+  /**/
+  /**/
+   /*>>>>>>>>>>>>>>>>>>>>>>>>----------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/  
 
-      Route::resource('Talleres','tallerController');
 
-      
-      Route::get('Agregar/taller',
-                       [
-                        'as'=>'taller.agregar',
-                        'uses'=>'TallerController@create'
-                       ]);
-             
-
-    });
 
 
 
@@ -312,9 +332,17 @@ Route::group(['middleware'=>['auth','seguimiento'||'admin' ]], function(){
 
 Auth::routes();
 
+ Route::get('logout', [
+            'as'=>'logout',
+            'uses'=>'HomeController@logout'
+                                               ]);
+/*
+
+Route::get('/', '\App\Http\Controllers\Auth\LoginController@logout')->name('auth.login'); 
+*/
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('home');
+
  
     //Abner: retorna en un json los empleados filtrador por el nombre
     //Route::get('empleados/{empleados}', 'BecariosController@becariosFilter');
