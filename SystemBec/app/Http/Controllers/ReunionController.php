@@ -6,16 +6,16 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use DB;
 
-class TallerController extends Controller
+class ReunionController extends Controller
 {
-     /*Este constructor lo que hace es pasarme a espanol la fecha con carbon*/
+      /*Este constructor lo que hace es pasarme a espanol la fecha con carbon*/
     public function __construct(){
            Carbon::setLocale('es');
                                  }
 
-    /*Sirve para la creacion del taller pantalla donde se crea con todos los campos*/
+    /*Sirve para la creacion de la reunion pantalla donde se crea con todos los campos*/
     public function create(){
-    return view('templates.admin.formacion.talleres.agregar');
+    return view('templates.admin.liderazgo.reunion.agregar');
 						                }
 
  
@@ -74,8 +74,5 @@ class TallerController extends Controller
          $carbon=Carbon::now();
     return view("templates.admin.formacion.becarios.perfil")->with('carbon',$carbon);
     }  
-
-
-
 
 }

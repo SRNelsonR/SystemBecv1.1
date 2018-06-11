@@ -70,5 +70,11 @@ class Kernel extends HttpKernel
         'admin'=> \App\Http\Middleware\Admin::class,
         'operaciones'=>\App\Http\Middleware\Operaciones::class,
         'seguimiento'=>\App\Http\Middleware\Seguimiento::class,
+        'formacion'=>\App\Http\Middleware\Formacion::class,
+        'liderazgo'=>\App\Http\Middleware\Liderazgo::class,
+        'operaciones'=>\App\Http\Middleware\Operaciones::class,
+        'monitoreo'=>\App\Http\Middleware\Monitoreo::class,
+        'planilla'=>\App\Http\Middleware\Planilla::class,
+        'contabilidad'=>\App\Http\Middleware\Planilla::class,
          ];
 }
