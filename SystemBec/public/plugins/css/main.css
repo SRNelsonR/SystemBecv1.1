@@ -242,7 +242,13 @@ iframe {
 }
 
 .login100-form-title {
-  
+  display: block;
+  width: 100%;
+  font-family: Poppins-Bold;
+  font-size: 39px;
+  color: blue;
+  line-height: 1.2;
+  text-align: left;
 }
 
 
