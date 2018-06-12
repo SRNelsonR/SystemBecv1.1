@@ -245,8 +245,8 @@ iframe {
   display: block;
   width: 100%;
   font-family: Poppins-Bold;
-  font-size: 39px;
-  color: #333333;
+  font-size: 100px;
+  color: gray;
   line-height: 1.2;
   text-align: left;
 }
@@ -540,7 +540,7 @@ iframe {
 @media screen and (max-width: 1680px) {
 
     #login1{
-     font-size: 0.2em;
+     font-size: 0.7em;
 
     
     
