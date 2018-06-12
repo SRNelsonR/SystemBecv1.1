@@ -7,7 +7,7 @@
             <div class="wrap-login100">
 
                 <div class="text-center login100-form-title ">
-                    <h1  id="login1" style="color: gray;">SYSTEMBEC</h1>
+                    <h1  id="login1" style="color: #5416e45e;">SYSTEMBEC</h1>
                     <hr>
                 </div>
 
