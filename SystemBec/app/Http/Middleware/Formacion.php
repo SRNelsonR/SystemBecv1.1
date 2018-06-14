@@ -26,7 +26,7 @@ class Formacion
         {        
         return $next($request);
         } else{
-            dd('Acceso denegado');
+            dd('Acceso denegado Violeta');
         }
     }
 }
