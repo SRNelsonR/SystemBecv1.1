@@ -35,7 +35,7 @@ class TallerController extends Controller
     /*Muestra todos los talleres que ya fueron desactivad0s*/                                        
 	public function historial(Request $request){
 		
-	return view('templates.admin.actividades.historial')->with('actividades',$actividades);
+	return view('templates.admin.formacion.talleres.historial');
 	                                             }
 
     /*Guardo cambios en los talleres*/
