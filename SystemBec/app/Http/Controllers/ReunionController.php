@@ -29,7 +29,7 @@ class ReunionController extends Controller
 	public function index(Request $request){
 		       $carbon=Carbon::now();
        
-	return view('templates.admin.formacion.talleres.index')->with('carbon',$carbon);
+	return view('templates.admin.liderazgo.reunion.index')->with('carbon',$carbon);
 	                                          }
 
     /*Muestra todos los talleres que ya fueron desactivad0s*/                                        
@@ -47,7 +47,7 @@ class ReunionController extends Controller
     /*Edito los talleres*/                                             
     public function edit($id){
      	     
-    return view('templates.admin.actividades.editar');
+    return view('templates.admin.liderazgo.reunion.editar');
                              }
 
     /*Este metodo es de eliminar pero yo lo utilice para cambiar el estado de los talleres ('sin son desactivados o no')*/
@@ -60,7 +60,7 @@ class ReunionController extends Controller
     /*Perfil del taller*/
     public function perfil($id){
 
-    return view("templates.admin.formacion.talleres.perfil");
+    return view("templates.admin.liderazgo.reunion.perfil");
     }
 
     /*Index de los becarios o el buscador*/
